@@ -9,12 +9,20 @@ pipeline {
                 println now.format("yyMMdd.HHmmss", TimeZone.getTimeZone('UTC'))
             }
         }
+
         stage('sleep here') {
         	steps {
 	        	sh 'sleep 5'
 	        	// next timestamp should be +5 sec ahead !
         	}
         }
+
+        stage('talk 2 telegram bot') {
+            steps {
+                echo "talk 2 telegram bot"
+            }
+        }
+
         stage('final_stage') {
 
             steps {
