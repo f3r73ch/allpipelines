@@ -19,11 +19,10 @@ pipeline {
 
         stage('talk 2 telegram bot') {
             steps {
-                echo "talk 2 telegram bot"
-		telegramSend 'Hello World'
+		        telegramSend 'Hello World'
             }
         }
-
+        
         stage('final_stage') {
 
             steps {
