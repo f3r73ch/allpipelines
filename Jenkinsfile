@@ -19,10 +19,10 @@ pipeline {
 
         stage('talk 2 telegram bot') {
             steps {
-		        telegramSend 'Hello World'
+                telegramSend(message: 'Hello World', chatId: 1001281109)
             }
         }
-        
+
         stage('final_stage') {
 
             steps {
