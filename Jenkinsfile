@@ -19,7 +19,7 @@ pipeline {
 
         stage('talk 2 telegram bot') {
             steps {
-                telegramSend(message: 'Hello World', chatId: 1001281109)
+                telegramSend(message: 'Hello from Jenkins pipeline')
             }
         }
 
