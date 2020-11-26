@@ -14,14 +14,15 @@ pipeline {
         	steps {
 	        	sh 'sleep 5'
 	        	// next timestamp should be +5 sec ahead !
+                telegramSend(message: "Im @ stage : ${env.STAGE_NAME}")
         	}
         }
 
-        stage('talk 2 telegram bot') {
+        /*stage('talk 2 telegram bot') {
             steps {
                 telegramSend(message: 'Hello from Jenkins pipeline')
             }
-        }
+        }*/
 
         stage('final_stage') {
 
