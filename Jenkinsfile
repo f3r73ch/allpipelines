@@ -14,17 +14,17 @@ pipeline {
         	steps {
 	        	sh 'sleep 5'
 	        	// next timestamp should be +5 sec ahead !
-                telegramSend(message: "Im @ stage : ${env.STAGE_NAME}")
+                telegramSend(message: "Im stage : ${env.STAGE_NAME}")
         	}
         }
 
-        /*stage('talk 2 telegram bot') {
+        stage('talk 2 EMAIL ') {
             steps {
                 emailext body: 'Test Message',
                         subject: 'Test Subject',
                         to: 'mail19780704@gmail.com'
             }
-        }*/
+        }
 
         stage('final_stage') {
 
