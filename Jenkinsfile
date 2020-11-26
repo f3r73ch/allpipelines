@@ -15,16 +15,14 @@ pipeline {
 	        	sh 'sleep 5'
 	        	// next timestamp should be +5 sec ahead !
                 telegramSend(message: "Im @ stage : ${env.STAGE_NAME}")
-                emailext body: 'Test Message',
-                        subject: 'Test Subject',
-                        to: 'mail19780704@gmail.com'
-
         	}
         }
 
         /*stage('talk 2 telegram bot') {
             steps {
-                telegramSend(message: 'Hello from Jenkins pipeline')
+                emailext body: 'Test Message',
+                        subject: 'Test Subject',
+                        to: 'mail19780704@gmail.com'
             }
         }*/
 
