@@ -12,8 +12,6 @@ pipeline {
 
         stage('telegramSend') {
         	steps {
-	        	sh 'sleep 5'
-	        	// next timestamp should be +5 sec ahead !
                 telegramSend(message: "Im stage : ${env.STAGE_NAME}")
         	}
         }
