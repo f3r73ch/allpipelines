@@ -10,7 +10,7 @@ pipeline {
             }
         }
 
-        stage('sleep here') {
+        stage('telegramSend') {
         	steps {
 	        	sh 'sleep 5'
 	        	// next timestamp should be +5 sec ahead !
