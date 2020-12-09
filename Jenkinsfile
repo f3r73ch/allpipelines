@@ -1,4 +1,11 @@
 def now = new Date()
+def email_recipient='mail19780704@gmail.com'
+
+void notif_email(String email_recipient) {
+    emailext body: 'Test Message',
+                        subject: 'Test Subject',
+                        to: email_recipient
+}
 
 pipeline {
     agent any
@@ -10,17 +17,15 @@ pipeline {
             }
         }
 
-        stage('telegramSend') {
+/*        stage('telegramSend') {
         	steps {
                 telegramSend(message: "Im stage : ${env.STAGE_NAME}")
         	}
-        }
+        }*/
 
         stage('talk 2 EMAIL ') {
             steps {
-                emailext body: 'Test Message',
-                        subject: 'Test Subject',
-                        to: 'mail19780704@gmail.com'
+                notif_email(email_recipient)
             }
         }
 
