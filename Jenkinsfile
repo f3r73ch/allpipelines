@@ -25,7 +25,7 @@ pipeline {
                 echo "this is a dummy placeholder : ${env.STAGE_NAME}"
                 println now.format("yyMMdd.HHmmss", TimeZone.getTimeZone('UTC'))
 
-                echo params.disable_notifications
+                echo "${params.disable_notifications}"
             }
         }
 
