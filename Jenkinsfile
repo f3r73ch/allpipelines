@@ -4,7 +4,7 @@ def email_recipient='mail19780704@gmail.com'
 void notif_email(String p_email_recipient) {
     emailext body: 'Test Message',
                         subject: 'Test Subject',
-                        to: p_email_recipient
+                        to: email_recipient
 }
 
 pipeline {
