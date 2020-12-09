@@ -1,14 +1,23 @@
 def now = new Date()
 def email_recipient='mail19780704@gmail.com'
 
-void notif_email(String p_email_recipient) {
-    emailext body: 'Test Message',
-                        subject: 'Test Subject',
-                        to: p_email_recipient
+void notif_email(String p_email_recipient ) {
+
+    if (${params.disable_notifications}!=true){
+        emailext body: 'Test Message',
+                            subject: 'Test Subject',
+                            to: p_email_recipient
+    }
 }
 
 pipeline {
     agent any
+
+    parameters {
+        booleanParam(name: 'disable_notifications', defaultValue: false) 
+    }
+
+
     stages {
         stage('gitcheckout') {
             steps {
