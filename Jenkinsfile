@@ -14,9 +14,9 @@ void notif_email(String p_email_recipient ) {
 pipeline {
     agent any
 
-    parameters {
+    /*parameters {
         booleanParam(name: 'disable_notifications', defaultValue: false) 
-    }
+    }*/
 
 
     stages {
@@ -24,6 +24,8 @@ pipeline {
             steps {
                 echo "this is a dummy placeholder : ${env.STAGE_NAME}"
                 println now.format("yyMMdd.HHmmss", TimeZone.getTimeZone('UTC'))
+
+                echo params.disable_notifications
             }
         }
 
