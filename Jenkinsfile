@@ -3,7 +3,8 @@ def email_recipient='mail19780704@gmail.com'
 
 void notif_email(String p_email_recipient ) {
 
-    if (${params.disable_notifications}!=true){
+
+    if ( params.disable_notifications !=true) {
         emailext body: 'Test Message',
                             subject: 'Test Subject',
                             to: p_email_recipient
