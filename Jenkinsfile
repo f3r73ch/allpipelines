@@ -25,7 +25,7 @@ pipeline {
 
         stage('talk 2 EMAIL ') {
             steps {
-                notif_email(email_recipient)
+                notif_email()
             }
         }
 
