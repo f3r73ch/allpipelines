@@ -1,7 +1,7 @@
 def now = new Date()
 def email_recipient='mail19780704@gmail.com'
 
-void notif_email(String email_recipient) {
+void notif_email(String email_recipient=email_recipient) {
     emailext body: 'Test Message',
                         subject: 'Test Subject',
                         to: email_recipient
@@ -25,7 +25,7 @@ pipeline {
 
         stage('talk 2 EMAIL ') {
             steps {
-                notif_email(email_recipient)
+                notif_email()
             }
         }
 
