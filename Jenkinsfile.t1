@@ -1,4 +1,12 @@
-
+// HEALTH assessment ENDPOINTS --------------------
+// envs
+def components_endpoints = [
+    'dataapi':'data',
+    'searchapi': 'search',
+    'ui': '',
+    'connectorapi': '',
+    'autonomationapi': 'automation'
+] 
 
 pipeline {
     //
@@ -14,6 +22,33 @@ pipeline {
         stage('testing') {
             steps {
                 echo "t1111"
+
+                def QA_ENV="rome"
+
+                
+
+                // *************************************************
+                // assess data API health --------------------------
+                // *************************************************
+                needle="live"
+                url = "https://${QA_ENV}.classify.congruity360.co.uk/${components_endpoints['dataapi']}"
+
+                println("endpoint_dataAPI: $url")
+
+
+                def commandStdout = sh(
+                    returnStdout: true, 
+                    //script: "curl -s -o /dev/null -w \"%{http_code}\" $url")
+                    script: "curl $url")
+
+
+                if (commandStdout.contains("$needle")) {
+                    println("FOUND needle : ${needle}")
+
+                } else {
+                    println("Something s wrong")
+                    error("FAILED health test")
+                }
             }
         }        
     }
