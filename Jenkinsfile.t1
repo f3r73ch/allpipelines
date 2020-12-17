@@ -13,7 +13,7 @@ pipeline {
 
         stage('testing') {
             steps {
-                echo "t1"
+                echo "t1111"
             }
         }        
     }
