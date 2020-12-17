@@ -27,7 +27,9 @@ pipeline {
         stage('testing') {
             steps {
 
-                library("hello")
+                library("helloworld")
+
+                helloworld
 
                 script{
 
