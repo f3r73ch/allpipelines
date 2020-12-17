@@ -1,7 +1,7 @@
 // HEALTH assessment ENDPOINTS --------------------
 // envs
 def components_map = [
-    'dataapi': [endpoint: 'data',needle: 'live'] ,
+    'dataapi': [endpoint: 'data',needle: 'live', updatedbep: 'deployment'] ,
     'searchapi': [endpoint: 'search',needle: 'live'],
     'ui': '',
     'connectorapi': '',
