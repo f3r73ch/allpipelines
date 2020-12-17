@@ -52,7 +52,7 @@ pipeline {
                     def commandStdout = sh(
                         returnStdout: true, 
                         //script: "curl -s -o /dev/null -w \"%{http_code}\" $url")
-                        script: "curl $url")
+                        script: "curl -s $url")
 
 
                     if (commandStdout.contains("$needle")) {
