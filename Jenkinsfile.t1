@@ -23,9 +23,9 @@ pipeline {
             steps {
                 echo "t1111"
 
-                def QA_ENV="rome"
+                QA_ENV="rome"
 
-                
+
 
                 // *************************************************
                 // assess data API health --------------------------
