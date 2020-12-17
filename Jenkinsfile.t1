@@ -43,8 +43,8 @@ pipeline {
                     // *************************************************
                     // assess data API health --------------------------
                     // *************************************************
-                    needle="${components_endpoints['dataapi']['needle']}"
-                    url = "https://${QA_ENV}.classify.congruity360.co.uk/${components_endpoints['dataapi']['endpoint']}"
+                    needle="${components_map['dataapi']['needle']}"
+                    url = "https://${QA_ENV}.classify.congruity360.co.uk/${components_map['dataapi']['endpoint']}"
 
                     println("endpoint_dataAPI: $url")
 
