@@ -23,32 +23,37 @@ pipeline {
             steps {
                 echo "t1111"
 
-                QA_ENV="rome"
+                script{
+                    
+                    QA_ENV="rome"
 
 
 
-                // *************************************************
-                // assess data API health --------------------------
-                // *************************************************
-                needle="live"
-                url = "https://${QA_ENV}.classify.congruity360.co.uk/${components_endpoints['dataapi']}"
+                    // *************************************************
+                    // assess data API health --------------------------
+                    // *************************************************
+                    needle="live"
+                    url = "https://${QA_ENV}.classify.congruity360.co.uk/${components_endpoints['dataapi']}"
 
-                println("endpoint_dataAPI: $url")
-
-
-                def commandStdout = sh(
-                    returnStdout: true, 
-                    //script: "curl -s -o /dev/null -w \"%{http_code}\" $url")
-                    script: "curl $url")
+                    println("endpoint_dataAPI: $url")
 
 
-                if (commandStdout.contains("$needle")) {
-                    println("FOUND needle : ${needle}")
+                    def commandStdout = sh(
+                        returnStdout: true, 
+                        //script: "curl -s -o /dev/null -w \"%{http_code}\" $url")
+                        script: "curl $url")
 
-                } else {
-                    println("Something s wrong")
-                    error("FAILED health test")
+
+                    if (commandStdout.contains("$needle")) {
+                        println("FOUND needle : ${needle}")
+
+                    } else {
+                        println("Something s wrong")
+                        error("FAILED health test")
+                    }
+
                 }
+
             }
         }        
     }
