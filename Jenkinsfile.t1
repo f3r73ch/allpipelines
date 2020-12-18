@@ -27,10 +27,6 @@ pipeline {
         stage('testing') {
             steps {
 
-                library("helloworld")
-
-                helloworld()
-
                 script{
 
                     QA_ENV="rome"
