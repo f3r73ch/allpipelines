@@ -1,4 +1,6 @@
-@Library('helloworld')
+@Library('pipelines_lib')_ 
+
+// ------------------------------------------------
 
 
 // HEALTH assessment ENDPOINTS --------------------
@@ -26,6 +28,10 @@ pipeline {
 
         stage('testing') {
             steps {
+
+
+                helloworld()
+
 
                 script{
 
