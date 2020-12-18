@@ -1,0 +1,32 @@
+@Library('pipelines_lib')_ 
+
+pipeline {
+    //
+    agent any
+    //
+    options { 
+        timestamps() 
+    }
+
+    // --------------------------------------------------
+    stages {
+
+        stage('testing') {
+            steps {
+
+
+                helloworld()
+
+
+/*                publishConfluence (
+                    siteName:  ,
+                    spaceName: ,
+                    pageName: ,
+
+                ) {
+                    append text: "testing"
+                }*/
+            }
+        }        
+    }
+}
