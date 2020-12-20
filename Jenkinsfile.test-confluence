@@ -1,4 +1,4 @@
-@Library('pipelines_lib')_ 
+//@Library('') _ 
 
 pipeline {
     //
