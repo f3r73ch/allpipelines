@@ -5,8 +5,9 @@
 TODO :
 - define release = date / epoch
 - credentials / token to access confluence
-- function: add_table_release(page_id default=, content default=)
-- 
+- function: add_table_release(page_id default=, content default=, previous_version)
+- function: get_previous_content / should contain previous version 
+- function: get_previous_version
 */
 
 
