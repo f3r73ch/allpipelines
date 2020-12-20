@@ -4,12 +4,13 @@ def call(){
 		  set +x
 		  curl -s \
 			-u "$USERPASS" \
-			--request GET \
-			--url 'https://f3r73ch.atlassian.net/wiki/rest/api/content/229524?expand=body.storage' \
-			--header 'Accept: application/json'
+			--request PUT \
+			--header 'Accept: application/json' \
+			-d@update-confluence.json \
+			https://f3r73ch.atlassian.net/wiki/rest/api/content/1540097
 		'''
+
 	}
 }
-
 
 

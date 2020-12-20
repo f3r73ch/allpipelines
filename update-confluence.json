@@ -1,0 +1,17 @@
+{
+  "id": "1540097",
+  "type": "page",
+  "title": "test1",
+  "space": {
+    "key": "MAIN"
+  },
+  "body": {
+    "storage": {
+      "value": "<table data-layout=\"default\"><colgroup><col style=\"width: 340.0px;\" /><col style=\"width: 340.0px;\" /></colgroup><tbody><tr><th><p><strong>Component</strong></p></th><th><p><strong>Container</strong></p></th></tr><tr><td><p>DataAPI</p></td><td><p>development_cc0156bbbfa_2020-11-13_3.1.4.138</p></td></tr><tr><td><p>SearchAPI</p></td><td><p>development_d1f27d8ebea_2020-11-13_3.1.4.142</p></td></tr><tr><td><p>ConnectorAPI</p></td><td><p>development_8a7ca3ec4d0_2020-11-13_3.1.4.142</p></td></tr><tr><td><p>AutomationAPI</p></td><td><p>development_451d3f87f7c_2020-11-13_3.1.4.142</p></td></tr><tr><td><p>Identity Server</p></td><td><p /></td></tr><tr><td><p>UI</p></td><td><p>dev_9566776a8ef_2020-11-13_3.1.4.142</p></td></tr><tr><td><p>Broker/Agents</p></td><td><p /></td></tr></tbody></table><p />",
+      "representation": "storage"
+    }
+  },
+  "version": {
+    "number": 4
+  }
+}
