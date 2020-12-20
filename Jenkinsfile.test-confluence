@@ -1,8 +1,4 @@
-//@Library('') _ 
-
-
-library 'helloworld.groovy'
-
+@Library('helloworld') _ 
 
 
 pipeline {
@@ -24,15 +20,6 @@ pipeline {
 
                 helloworld('f3r')
 
-
-/*                publishConfluence (
-                    siteName:  ,
-                    spaceName: ,
-                    pageName: ,
-
-                ) {
-                    append text: "testing"
-                }*/
             }
         }        
     }
