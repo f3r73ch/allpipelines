@@ -1,8 +1,8 @@
 def call(){
 	echo "here"
+
 	withCredentials([usernameColonPassword(credentialsId: 'confluence-f3r73ch', variable: 'USERPASS')]) {
 		sh '''
-		  set +x
 		  curl \
 		  -u "$USERPASS" \
 		  --request PUT \
