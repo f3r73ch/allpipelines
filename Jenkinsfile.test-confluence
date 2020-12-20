@@ -1,4 +1,4 @@
-@Library('helloworld') _ 
+@Library('allpipelines-libs') _ 
 
 
 pipeline {
