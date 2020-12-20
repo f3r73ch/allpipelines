@@ -15,10 +15,10 @@ pipeline {
 
         stage('testing') {
             
-            library('helloworld')
 
             steps {
 
+                library('helloworld')
 
                 helloworld('f3r')
 
