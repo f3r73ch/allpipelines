@@ -1,6 +1,20 @@
 @Library('allpipelines-libs') _ 
 
 
+/*
+TODO :
+- define release = date / epoch
+- credentials / token to access confluence
+- function: add_table_release(page_id default=, content default=)
+- 
+*/
+
+
+def PAGE_ID="1540097"
+def PAGE_SPACE="MAIN"
+
+
+
 pipeline {
     //
     agent any
@@ -14,11 +28,9 @@ pipeline {
 
         stage('testing') {
             
-
             steps {
 
-
-                helloworld('f3r')
+                add_table_release()
 
             }
         }        
