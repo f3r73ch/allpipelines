@@ -18,7 +18,7 @@ pipeline {
 
             steps {
 
-                library('helloworld')
+                library('helloworld.groovy')
 
                 helloworld('f3r')
 
