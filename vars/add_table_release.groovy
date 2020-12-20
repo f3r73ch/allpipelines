@@ -1,5 +1,5 @@
 def call(){
-	withCredentials([usernameColonPassword(credentialsId: '', variable: 'USERPASS')]) {
+	withCredentials([usernameColonPassword(credentialsId: 'confluence-f3r73ch', variable: 'USERPASS')]) {
 		sh '''
 		  set +x
 		  curl -s \
