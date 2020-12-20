@@ -14,7 +14,7 @@ def call(){
 							returnStdout: true
 		)
 
-		echo ${response}
+		echo "${response}"
 
 	}
 }
